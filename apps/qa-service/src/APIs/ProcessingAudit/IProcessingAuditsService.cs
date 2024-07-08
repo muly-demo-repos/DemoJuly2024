@@ -5,6 +5,8 @@ namespace QaService.APIs;
 
 public interface IProcessingAuditsService
 {
+    public Task<double> CalculateSomething(string data);
+
     /// <summary>
     /// Create one ProcessingAudit
     /// </summary>

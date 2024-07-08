@@ -18,11 +18,18 @@ public abstract class ProcessingAuditsControllerBase : ControllerBase
         _service = service;
     }
 
+    [HttpGet("{Id}/calculate-something")]
+    [Authorize(Roles = "admin,user")]
+    public async Task<double> CalculateSomething([FromBody()] string data)
+    {
+        return await _service.CalculateSomething(data);
+    }
+
     /// <summary>
     /// Create one ProcessingAudit
     /// </summary>
     [HttpPost()]
-    [Authorize(Roles = "user")]
+    [Authorize(Roles = "admin,user")]
     public async Task<ActionResult<ProcessingAudit>> CreateProcessingAudit(
         ProcessingAuditCreateInput input
     )
@@ -40,7 +47,7 @@ public abstract class ProcessingAuditsControllerBase : ControllerBase
     /// Delete one ProcessingAudit
     /// </summary>
     [HttpDelete("{Id}")]
-    [Authorize(Roles = "user")]
+    [Authorize(Roles = "admin")]
     public async Task<ActionResult> DeleteProcessingAudit(
         [FromRoute()] ProcessingAuditWhereUniqueInput uniqueId
     )
@@ -61,7 +68,7 @@ public abstract class ProcessingAuditsControllerBase : ControllerBase
     /// Find many ProcessingAudits
     /// </summary>
     [HttpGet()]
-    [Authorize(Roles = "user")]
+    [Authorize(Roles = "admin,user")]
     public async Task<ActionResult<List<ProcessingAudit>>> ProcessingAudits(
         [FromQuery()] ProcessingAuditFindManyArgs filter
     )
@@ -73,7 +80,7 @@ public abstract class ProcessingAuditsControllerBase : ControllerBase
     /// Get one ProcessingAudit
     /// </summary>
     [HttpGet("{Id}")]
-    [Authorize(Roles = "user")]
+    [Authorize(Roles = "admin,user")]
     public async Task<ActionResult<ProcessingAudit>> ProcessingAudit(
         [FromRoute()] ProcessingAuditWhereUniqueInput uniqueId
     )
@@ -103,7 +110,7 @@ public abstract class ProcessingAuditsControllerBase : ControllerBase
     /// Update one ProcessingAudit
     /// </summary>
     [HttpPatch("{Id}")]
-    [Authorize(Roles = "user")]
+    [Authorize(Roles = "admin,user")]
     public async Task<ActionResult> UpdateProcessingAudit(
         [FromRoute()] ProcessingAuditWhereUniqueInput uniqueId,
         [FromQuery()] ProcessingAuditUpdateInput processingAuditUpdateDto

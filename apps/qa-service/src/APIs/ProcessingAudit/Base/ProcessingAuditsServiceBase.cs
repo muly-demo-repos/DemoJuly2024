@@ -18,6 +18,11 @@ public abstract class ProcessingAuditsServiceBase : IProcessingAuditsService
         _context = context;
     }
 
+    public async Task<double> CalculateSomething(string data)
+    {
+        throw new NotImplementedException();
+    }
+
     /// <summary>
     /// Create one ProcessingAudit
     /// </summary>
