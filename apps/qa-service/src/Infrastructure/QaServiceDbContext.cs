@@ -13,4 +13,6 @@ public class QaServiceDbContext : IdentityDbContext<IdentityUser>
     public DbSet<TicketCriterionDbModel> TicketCriteria { get; set; }
 
     public DbSet<TicketCategoryDbModel> TicketCategories { get; set; }
+
+    public DbSet<ProcessingAuditDbModel> ProcessingAudits { get; set; }
 }
