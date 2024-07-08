@@ -22,7 +22,7 @@ public abstract class TicketCategoriesControllerBase : ControllerBase
     /// Create one TicketCategory
     /// </summary>
     [HttpPost()]
-    [Authorize(Roles = "user")]
+    [Authorize(Roles = "admin,user")]
     public async Task<ActionResult<TicketCategory>> CreateTicketCategory(
         TicketCategoryCreateInput input
     )
@@ -40,7 +40,7 @@ public abstract class TicketCategoriesControllerBase : ControllerBase
     /// Delete one TicketCategory
     /// </summary>
     [HttpDelete("{Id}")]
-    [Authorize(Roles = "user")]
+    [Authorize(Roles = "admin,user")]
     public async Task<ActionResult> DeleteTicketCategory(
         [FromRoute()] TicketCategoryWhereUniqueInput uniqueId
     )
@@ -61,7 +61,7 @@ public abstract class TicketCategoriesControllerBase : ControllerBase
     /// Find many TicketCategories
     /// </summary>
     [HttpGet()]
-    [Authorize(Roles = "user")]
+    [Authorize(Roles = "admin,user")]
     public async Task<ActionResult<List<TicketCategory>>> TicketCategories(
         [FromQuery()] TicketCategoryFindManyArgs filter
     )
@@ -73,7 +73,7 @@ public abstract class TicketCategoriesControllerBase : ControllerBase
     /// Get one TicketCategory
     /// </summary>
     [HttpGet("{Id}")]
-    [Authorize(Roles = "user")]
+    [Authorize(Roles = "admin,user")]
     public async Task<ActionResult<TicketCategory>> TicketCategory(
         [FromRoute()] TicketCategoryWhereUniqueInput uniqueId
     )
@@ -103,7 +103,7 @@ public abstract class TicketCategoriesControllerBase : ControllerBase
     /// Connect multiple TicketCriteria records to TicketCategory
     /// </summary>
     [HttpPost("{Id}/ticketCriteria")]
-    [Authorize(Roles = "user")]
+    [Authorize(Roles = "admin,user")]
     public async Task<ActionResult> ConnectTicketCriteria(
         [FromRoute()] TicketCategoryWhereUniqueInput uniqueId,
         [FromQuery()] TicketCriterionWhereUniqueInput[] ticketCriteriaId
@@ -125,7 +125,7 @@ public abstract class TicketCategoriesControllerBase : ControllerBase
     /// Disconnect multiple TicketCriteria records from TicketCategory
     /// </summary>
     [HttpDelete("{Id}/ticketCriteria")]
-    [Authorize(Roles = "user")]
+    [Authorize(Roles = "admin,user")]
     public async Task<ActionResult> DisconnectTicketCriteria(
         [FromRoute()] TicketCategoryWhereUniqueInput uniqueId,
         [FromBody()] TicketCriterionWhereUniqueInput[] ticketCriteriaId
@@ -147,7 +147,7 @@ public abstract class TicketCategoriesControllerBase : ControllerBase
     /// Find multiple TicketCriteria records for TicketCategory
     /// </summary>
     [HttpGet("{Id}/ticketCriteria")]
-    [Authorize(Roles = "user")]
+    [Authorize(Roles = "admin,user")]
     public async Task<ActionResult<List<TicketCriterion>>> FindTicketCriteria(
         [FromRoute()] TicketCategoryWhereUniqueInput uniqueId,
         [FromQuery()] TicketCriterionFindManyArgs filter
@@ -167,7 +167,7 @@ public abstract class TicketCategoriesControllerBase : ControllerBase
     /// Update multiple TicketCriteria records for TicketCategory
     /// </summary>
     [HttpPatch("{Id}/ticketCriteria")]
-    [Authorize(Roles = "user")]
+    [Authorize(Roles = "admin,user")]
     public async Task<ActionResult> UpdateTicketCriteria(
         [FromRoute()] TicketCategoryWhereUniqueInput uniqueId,
         [FromBody()] TicketCriterionWhereUniqueInput[] ticketCriteriaId
@@ -189,7 +189,7 @@ public abstract class TicketCategoriesControllerBase : ControllerBase
     /// Update one TicketCategory
     /// </summary>
     [HttpPatch("{Id}")]
-    [Authorize(Roles = "user")]
+    [Authorize(Roles = "admin,user")]
     public async Task<ActionResult> UpdateTicketCategory(
         [FromRoute()] TicketCategoryWhereUniqueInput uniqueId,
         [FromQuery()] TicketCategoryUpdateInput ticketCategoryUpdateDto

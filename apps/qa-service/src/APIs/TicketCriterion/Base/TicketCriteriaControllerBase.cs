@@ -22,7 +22,7 @@ public abstract class TicketCriteriaControllerBase : ControllerBase
     /// Create one TicketCriteria
     /// </summary>
     [HttpPost()]
-    [Authorize(Roles = "user")]
+    [Authorize(Roles = "admin,user")]
     public async Task<ActionResult<TicketCriterion>> CreateTicketCriterion(
         TicketCriterionCreateInput input
     )
@@ -40,7 +40,7 @@ public abstract class TicketCriteriaControllerBase : ControllerBase
     /// Delete one TicketCriteria
     /// </summary>
     [HttpDelete("{Id}")]
-    [Authorize(Roles = "user")]
+    [Authorize(Roles = "admin,user")]
     public async Task<ActionResult> DeleteTicketCriterion(
         [FromRoute()] TicketCriterionWhereUniqueInput uniqueId
     )
@@ -61,7 +61,7 @@ public abstract class TicketCriteriaControllerBase : ControllerBase
     /// Find many TicketCriteria
     /// </summary>
     [HttpGet()]
-    [Authorize(Roles = "user")]
+    [Authorize(Roles = "admin,user")]
     public async Task<ActionResult<List<TicketCriterion>>> TicketCriteria(
         [FromQuery()] TicketCriterionFindManyArgs filter
     )
@@ -73,7 +73,7 @@ public abstract class TicketCriteriaControllerBase : ControllerBase
     /// Get one TicketCriteria
     /// </summary>
     [HttpGet("{Id}")]
-    [Authorize(Roles = "user")]
+    [Authorize(Roles = "admin,user")]
     public async Task<ActionResult<TicketCriterion>> TicketCriterion(
         [FromRoute()] TicketCriterionWhereUniqueInput uniqueId
     )
@@ -115,7 +115,7 @@ public abstract class TicketCriteriaControllerBase : ControllerBase
     /// Update one TicketCriteria
     /// </summary>
     [HttpPatch("{Id}")]
-    [Authorize(Roles = "user")]
+    [Authorize(Roles = "admin,user")]
     public async Task<ActionResult> UpdateTicketCriterion(
         [FromRoute()] TicketCriterionWhereUniqueInput uniqueId,
         [FromQuery()] TicketCriterionUpdateInput ticketCriterionUpdateDto
