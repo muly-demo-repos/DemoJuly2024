@@ -1,0 +1,428 @@
+[
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Product",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "Product",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Product",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Product",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "Product",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Product",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Product",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "Product",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Product",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Product",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "Product",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Product",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Product",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "Product",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Product",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Category",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "Category",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Category",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Category",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "Category",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Category",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "Category",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Category",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Category",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "Category",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Category",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Order",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "Order",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Order",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Order",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "Order",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Order",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Order",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "Order",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Order",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Order",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "Order",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Order",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Order",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "Order",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Order",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Customer",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "Customer",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Customer",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Customer",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "Customer",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Customer",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Customer",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "Customer",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Customer",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Customer",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "Customer",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Customer",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Customer",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "maintainer",
+    "resource": "Customer",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Customer",
+    "action": "read:any",
+    "attributes": "*"
+  }
+]
