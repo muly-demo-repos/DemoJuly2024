@@ -1,0 +1,68 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  firstName String?
+  lastName  String?
+  username  String   @unique
+  email     String?  @unique
+  password  String
+  roles     Json
+}
+
+model Product {
+  id          String    @id @default(cuid())
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  name        String?
+  description String?
+  price       Float?
+  sku         String?
+  category    Category? @relation(fields: [categoryId], references: [id])
+  categoryId  String?
+}
+
+model Category {
+  id          String    @id @default(cuid())
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  name        String?
+  description String?
+  products    Product[]
+}
+
+model Order {
+  id         String           @id @default(cuid())
+  createdAt  DateTime         @default(now())
+  updatedAt  DateTime         @updatedAt
+  orderDate  DateTime?
+  status     EnumOrderStatus?
+  products   Json?
+  customer   Customer?        @relation(fields: [customerId], references: [id])
+  customerId String?
+}
+
+model Customer {
+  id               String   @id @default(cuid())
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  firstName        String?
+  lastName         String?
+  email            String?
+  phoneNumber      String?
+  orders           Order[]
+  customerMetadata String?
+}
+
+enum EnumOrderStatus {
+  Option1
+}
