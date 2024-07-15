@@ -233,4 +233,21 @@ export class CarControllerBase {
       throw error;
     }
   }
+
+  @common.Get("/:id/calculate-average-yearly-mileage")
+  @swagger.ApiOkResponse({
+    type: Number,
+  })
+  @swagger.ApiNotFoundResponse({
+    type: errors.NotFoundException,
+  })
+  @swagger.ApiForbiddenResponse({
+    type: errors.ForbiddenException,
+  })
+  async CalculateAverageYearlyMileage(
+    @common.Body()
+    body: CarWhereUniqueInput
+  ): Promise<number> {
+    return this.service.CalculateAverageYearlyMileage(body);
+  }
 }

@@ -15,6 +15,7 @@ import {
   Car as PrismaCar,
   Customer as PrismaCustomer,
 } from "@prisma/client";
+import { CarWhereUniqueInput } from "./CarWhereUniqueInput";
 
 export class CarServiceBase {
   constructor(protected readonly prisma: PrismaService) {}
@@ -45,5 +46,10 @@ export class CarServiceBase {
         where: { id: parentId },
       })
       .customer();
+  }
+  async CalculateAverageYearlyMileage(
+    args: CarWhereUniqueInput
+  ): Promise<number> {
+    throw new Error("Not implemented");
   }
 }

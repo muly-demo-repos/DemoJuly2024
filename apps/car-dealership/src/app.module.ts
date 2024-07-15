@@ -6,6 +6,7 @@ import { SalespersonModule } from "./salesperson/salesperson.module";
 import { SaleModule } from "./sale/sale.module";
 import { VehicleModule } from "./vehicle/vehicle.module";
 import { ClientModule } from "./client/client.module";
+import { AnalyticsModule } from "./Analytics/analytics.module";
 import { HealthModule } from "./health/health.module";
 import { PrismaModule } from "./prisma/prisma.module";
 import { SecretsManagerModule } from "./providers/secrets/secretsManager.module";
@@ -30,6 +31,7 @@ import { AuthModule } from "./auth/auth.module";
     SaleModule,
     VehicleModule,
     ClientModule,
+    AnalyticsModule,
     HealthModule,
     PrismaModule,
     SecretsManagerModule,

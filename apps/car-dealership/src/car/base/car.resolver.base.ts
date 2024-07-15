@@ -27,6 +27,7 @@ import { CreateCarArgs } from "./CreateCarArgs";
 import { UpdateCarArgs } from "./UpdateCarArgs";
 import { DeleteCarArgs } from "./DeleteCarArgs";
 import { Customer } from "../../customer/base/Customer";
+import { CarWhereUniqueInput } from "./CarWhereUniqueInput";
 import { CarService } from "../car.service";
 @common.UseGuards(GqlDefaultAuthGuard, gqlACGuard.GqlACGuard)
 @graphql.Resolver(() => Car)
@@ -166,5 +167,13 @@ export class CarResolverBase {
       return null;
     }
     return result;
+  }
+
+  @graphql.Query(() => Number)
+  async CalculateAverageYearlyMileage(
+    @graphql.Args()
+    args: CarWhereUniqueInput
+  ): Promise<number> {
+    return this.service.CalculateAverageYearlyMileage(args);
   }
 }
