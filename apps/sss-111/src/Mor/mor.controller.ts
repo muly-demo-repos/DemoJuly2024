@@ -21,7 +21,7 @@ export class MorController {
   })
   async MyAction(
     @common.Body()
-    body: Muly
+    body: string
   ): Promise<string> {
         const args = {
   prop1: body,
@@ -41,7 +41,7 @@ export class MorController {
   })
   async MyOtherAction(
     @common.Body()
-    body: Muly
+    body: string
   ): Promise<string> {
         return this.service.MyOtherAction(body);
       }
@@ -57,9 +57,9 @@ export class MorController {
     type: errors.ForbiddenException
   })
   async ThirdAction(
-    @common.Body()
-    body: Muly
+    @common.Query()
+    query: Muly
   ): Promise<Muly> {
-        return this.service.ThirdAction(body);
+        return this.service.ThirdAction(query);
       }
 }
