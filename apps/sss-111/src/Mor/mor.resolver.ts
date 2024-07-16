@@ -16,7 +16,7 @@ export class MorResolver {
   @graphql.Query(() => String)
   async MyOtherAction(
     @graphql.Args()
-    args: Muly
+    args: string
   ): Promise<string> {
     return this.service.MyOtherAction(args);
   }

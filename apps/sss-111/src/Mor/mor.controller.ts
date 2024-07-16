@@ -2,14 +2,13 @@ import * as common from "@nestjs/common";
 import * as swagger from "@nestjs/swagger";
 import * as errors from "../errors";
 import { MorService } from "./mor.service";
-import { Muly } from "../mor/Muly";
 
 @swagger.ApiTags("mors")
 @common.Controller("mors")
 export class MorController {
   constructor(protected readonly service: MorService) {}
 
-  @common.Post("/:id/my-action")
+  @common.Post("/muly")
   @swagger.ApiOkResponse({
     type: String
   })
@@ -20,22 +19,16 @@ export class MorController {
     type: errors.ForbiddenException
   })
   async MyAction(
-    @common.Param()
-    params: string,
-    @common.Query()
-    query: string,
     @common.Body()
-    body: Muly
+    body: string
   ): Promise<string> {
         const args = {
-  prop2: params,
-  prop3: query,
   prop1: body,
   };
   return this.service.MyAction(args);
       }
 
-  @common.Get("/:id/my-other-action")
+  @common.Post("/muly")
   @swagger.ApiOkResponse({
     type: String
   })
@@ -47,7 +40,7 @@ export class MorController {
   })
   async MyOtherAction(
     @common.Body()
-    body: Muly
+    body: string
   ): Promise<string> {
         return this.service.MyOtherAction(body);
       }
