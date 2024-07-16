@@ -7,7 +7,7 @@ export class MorService {
   async MyAction(args: Muly): Promise<string> {
     throw new Error("Not implemented");
   }
-  async MyOtherAction(args: Muly): Promise<string> {
+  async MyOtherAction(args: string): Promise<string> {
     throw new Error("Not implemented");
   }
 }
