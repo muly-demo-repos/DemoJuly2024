@@ -22,11 +22,14 @@ export class MorController {
   async MyAction(
     @common.Param()
     params: string,
+    @common.Query()
+    query: string,
     @common.Body()
     body: Muly
   ): Promise<string> {
         const args = {
   prop2: params,
+  prop3: query,
   prop1: body,
   };
   return this.service.MyAction(args);
