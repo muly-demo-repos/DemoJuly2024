@@ -20,10 +20,13 @@ export class MorController {
     type: errors.ForbiddenException
   })
   async MyAction(
+    @common.Query()
+    query: Muly,
     @common.Body()
     body: string
   ): Promise<string> {
         const args = {
+  prop2: query,
   prop1: body,
   };
   return this.service.MyAction(args);
