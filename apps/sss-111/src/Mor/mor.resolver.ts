@@ -20,4 +20,12 @@ export class MorResolver {
   ): Promise<string> {
     return this.service.MyOtherAction(args);
   }
+
+  @graphql.Query(() => Muly)
+  async ThirdAction(
+    @graphql.Args()
+    args: Muly
+  ): Promise<Muly> {
+    return this.service.ThirdAction(args);
+  }
 }
