@@ -1,0 +1,24 @@
+using CactusDemo.Core.Enums;
+
+namespace CactusDemo.APIs.Dtos;
+
+public class AppModel
+{
+    public string Id { get; set; }
+
+    public string DirName { get; set; }
+
+    public string? Keys { get; set; }
+
+    public CategoriesEnum Categories { get; set; }
+
+    public DateTime CreatedAt { get; set; }
+
+    public DateTime UpdatedAt { get; set; }
+
+    public List<string>? ApiKey { get; set; }
+
+    public List<int>? Credential { get; set; }
+
+    public List<string>? Webhook { get; set; }
+}
