@@ -1,9 +1,6 @@
 using System.Reflection;
 using Haim;
 using Haim.APIs;
-using Haim.Brokers.Kafka;
-using Haim.Infrastructure;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,10 +28,6 @@ builder.Services.AddCors(builder =>
     );
 });
 builder.Services.AddApiAuthentication();
-builder.AddKafka();
-builder.Services.AddDbContext<HaimDbContext>(opt =>
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
-);
 var app = builder.Build();
 
 app.UseCors();
