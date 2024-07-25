@@ -329,8 +329,42 @@ export class CarControllerBase {
   })
   async CalculateCarValue(
     @common.Body()
-    body: CarWhereUniqueInput
+    body: string
   ): Promise<number> {
     return this.service.CalculateCarValue(body);
+  }
+
+  @common.Get("/:id/my-action")
+  @swagger.ApiOkResponse({
+    type: String,
+  })
+  @swagger.ApiNotFoundResponse({
+    type: errors.NotFoundException,
+  })
+  @swagger.ApiForbiddenResponse({
+    type: errors.ForbiddenException,
+  })
+  async MyAction(
+    @common.Body()
+    body: string
+  ): Promise<string> {
+    return this.service.MyAction(body);
+  }
+
+  @common.Get("/:id/new-action")
+  @swagger.ApiOkResponse({
+    type: String,
+  })
+  @swagger.ApiNotFoundResponse({
+    type: errors.NotFoundException,
+  })
+  @swagger.ApiForbiddenResponse({
+    type: errors.ForbiddenException,
+  })
+  async NewAction(
+    @common.Body()
+    body: string
+  ): Promise<string> {
+    return this.service.NewAction(body);
   }
 }

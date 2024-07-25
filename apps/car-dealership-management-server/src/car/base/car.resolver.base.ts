@@ -158,4 +158,20 @@ export class CarResolverBase {
   ): Promise<number> {
     return this.service.CalculateCarValue(args);
   }
+
+  @graphql.Query(() => String)
+  async MyAction(
+    @graphql.Args()
+    args: string
+  ): Promise<string> {
+    return this.service.MyAction(args);
+  }
+
+  @graphql.Query(() => String)
+  async NewAction(
+    @graphql.Args()
+    args: string
+  ): Promise<string> {
+    return this.service.NewAction(args);
+  }
 }

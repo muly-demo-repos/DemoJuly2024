@@ -49,4 +49,10 @@ export class CarServiceBase {
   async CalculateCarValue(args: CarWhereUniqueInput): Promise<number> {
     throw new Error("Not implemented");
   }
+  async MyAction(args: string): Promise<string> {
+    throw new Error("Not implemented");
+  }
+  async NewAction(args: string): Promise<string> {
+    throw new Error("Not implemented");
+  }
 }
